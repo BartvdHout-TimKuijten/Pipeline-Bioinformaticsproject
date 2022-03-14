@@ -42,5 +42,6 @@ print(G)
 
 ploatje
 
-./workflow/readme.txt
+[andere readme](./workflow/readme.txt)
+
 
