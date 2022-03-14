@@ -41,3 +41,6 @@ print(G)
 ![image](https://user-images.githubusercontent.com/101574287/158194853-7df1007c-ca55-4227-8b80-0cef3580af71.png)
 
 ploatje
+
+./workflow/readme.txt
+
