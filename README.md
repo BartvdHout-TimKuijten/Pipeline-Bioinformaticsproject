@@ -3,14 +3,15 @@ ABR pipeline for EMC
 
 Whoohoo, I'm working in Github for the first time!
 
-##Part1
+## Part1
+
 `num = 1 + 1`
 `print(num)`
 
 
 
 
-###Syntax Table
+### Syntax Table
 Syntax | Preview
 -|-
 Bold | **Bold**
@@ -19,6 +20,6 @@ Strikethrough | ~~Crossed out~~
 Inline code | `Code`
 
 
-##Part2
+## Part2
 
 Hello
