@@ -42,6 +42,6 @@ print(G)
 
 ploatje
 
-[andere readme](workflow/readme.txt)
+[andere readme](Pipeline-Bioinformaticsproject/Workflow/readme.txt)
 
 
