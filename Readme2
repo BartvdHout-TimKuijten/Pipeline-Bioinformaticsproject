@@ -1,0 +1,19 @@
+Eerste line
+
+# header 1
+
+First Header | Second Header
+-------------|--------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+
+### Syntax Table
+
+Syntax | Preview
+-------------|--------------
+Bold | **Bold**
+Italic | _Italic_
+Strikethrough | -Strikethrough-
+Inline code | `code`
+
+
