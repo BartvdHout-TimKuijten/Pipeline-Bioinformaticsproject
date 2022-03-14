@@ -29,3 +29,7 @@ hoi
 
 
 `code`
+```Python
+G = "ABCD"
+print(G)
+```
