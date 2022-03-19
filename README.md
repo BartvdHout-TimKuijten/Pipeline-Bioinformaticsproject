@@ -5,6 +5,7 @@ This Branch consists of several different folders with each a respective purpose
 
 
 # Foldername | Purpose
+-------------|--------------
 Workflows folder | Stores workflows from galaxy
 Tools | Stores different tools and their tests
 Updates | Stores txt files containing different updates on the project
