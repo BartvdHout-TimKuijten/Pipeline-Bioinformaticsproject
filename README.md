@@ -1,35 +1,12 @@
 # Pipeline-Bioinformaticsproject
 ABR pipeline for EMC
 
-Whoohoo, I'm working in Github for the first time!
-
-## Part1
-
-`num = 1 + 1`
-`print(num)`
+This Branch consists of several different folders with each a respective purpose. 
 
 
-
-
-### Syntax Table
-Syntax | Preview
--|-
-Bold | **Bold**
-Italic | _Italic_
-Strikethrough | ~~Crossed out~~
-Inline code | `Code`
-
-
-## Part2
-
-Hello
-
-
-hoi
-
-
-`code`
-```Python
-G = "ABCD"
-print(G)
-```
+# Foldername | # Purpose
+Workflows folder | Stores workflows from galaxy
+Tools | Stores different tools and their tests
+Updates | Stores txt files containing different updates on the project
+Pipeline test | Contains files where different tools are combined
+Final Pipeline | Contains the final pipeline
