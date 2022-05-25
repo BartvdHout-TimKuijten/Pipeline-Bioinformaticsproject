@@ -1,0 +1,4 @@
+Commandline now runs StarAMR, ABRicate, hAMRonize
+AntiSMASH has troubles with sideloading JSON. Normal AntiSMASH produces results. 
+
+Update is made to peers
