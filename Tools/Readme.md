@@ -1,1 +1,1 @@
-In deze map worden verschillende tools getest. 
+This map contains a list of tools used in the pipeline.
