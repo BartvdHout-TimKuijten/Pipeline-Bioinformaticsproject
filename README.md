@@ -21,4 +21,5 @@ Final Pipeline | Contains the final pipeline
 ![image](https://user-images.githubusercontent.com/101572525/176131441-86135f30-8d64-41f6-9826-a4aac694f0ff.png)
 
 <ins>The flowchart below depticts the process of the project<ins>  
-![image](https://user-images.githubusercontent.com/101572525/176153089-8ea81c45-fc2b-4cd8-9be8-628aedd0b5ec.png)
+
+![image](https://user-images.githubusercontent.com/101572525/176153407-d33135e6-73ba-46c8-8663-c631f8e975d7.png)
