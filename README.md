@@ -1,5 +1,9 @@
 # Pipeline-Bioinformaticsproject
-ABR pipeline for EMC
+Bart van den Hout & Tim Kuijten
+Avans Hogescholen
+Project supervisor: Helena Rashe
+The Host-Microbe Interactomics (HM I) and Bioinformatics (BIF) groups at WUR, Erasmus University Medical Centre, Rotterdam
+
 
 This Branch consists of several different folders with each a respective purpose. 
 
