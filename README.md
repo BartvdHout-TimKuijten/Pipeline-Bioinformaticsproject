@@ -1,7 +1,7 @@
 # Pipeline-Bioinformaticsproject
-Bart van den Hout & Tim Kuijten
-Avans Hogescholen
-Project supervisor: Helena Rashe
+Bart van den Hout & Tim Kuijten  
+Avans Hogescholen  
+Project supervisor: Helena Rashe  
 The Host-Microbe Interactomics (HM I) and Bioinformatics (BIF) groups at WUR, Erasmus University Medical Centre, Rotterdam
 
 
