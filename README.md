@@ -16,6 +16,9 @@ Updates | Stores txt files containing different updates on the project
 Pipeline test | Contains files where different tools are combined
 Final Pipeline | Contains the final pipeline
 
-<ins>Below is a flowchart of the current design of the pipeline<ins>  
+<ins>The flowchart below depicts the current pipeline<ins>  
 
 ![image](https://user-images.githubusercontent.com/101572525/176131441-86135f30-8d64-41f6-9826-a4aac694f0ff.png)
+
+<ins>The flowchart below depticts the process of the project<ins>  
+![image](https://user-images.githubusercontent.com/101572525/176153089-8ea81c45-fc2b-4cd8-9be8-628aedd0b5ec.png)
