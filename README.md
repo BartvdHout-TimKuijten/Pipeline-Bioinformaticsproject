@@ -5,6 +5,8 @@ Project supervisor: Helena Rashe
 The Host-Microbe Interactomics (HM I) and Bioinformatics (BIF) groups at WUR, Erasmus University Medical Centre, Rotterdam
 
 
+The goal of this project is to create a pipeline to automate the detection of ABR genes as well as virulence factors, and output the data into a standardized report. This report should be easily understandable by medical staff with little to no knowledge of Bioinformatics.
+
 In the table below all the directories of this github are listed, as well as their contents and purpose
 Foldername | Purpose
 -------------|--------------
