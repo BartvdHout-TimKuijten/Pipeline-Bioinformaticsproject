@@ -6,7 +6,7 @@ import argparse
 output = {
   "tool": {
     "name": "hAMRonize",
-    "version": "1.0.3",
+    "version": "?",
     "description": "Tool for combining results",
     "configuration": {
       "verbose": "true",
@@ -17,7 +17,7 @@ output = {
     }
   }, "records": []}
 
-with open("*.json", "r") as handle:
+with open("input.json", "r") as handle:
     value = handle.read()
 
     x = json.loads(value)
@@ -65,7 +65,7 @@ with open("*.json", "r") as handle:
             output["records"].append(record)
 
 
-with open("summarizednew2.json", "w") as handle:
+with open("output.json", "w") as handle:
     
     a = json.dumps(output, indent=2)
     handle.write(a)
