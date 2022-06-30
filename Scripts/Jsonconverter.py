@@ -1,6 +1,4 @@
-````
-
-
+#!/usr/bin/env python
 import json
 import argparse
 
@@ -71,8 +69,3 @@ with open("summarizednew2.json", "w") as handle:
     
     a = json.dumps(output, indent=2)
     handle.write(a)
-    
-    
-````
-
-
