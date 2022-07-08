@@ -1,0 +1,460 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "ARGsMASH Workflow",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Input Assembly"
+                }
+            ],
+            "label": "Input Assembly",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 364.2000045776367,
+                "height": 82.20000457763672,
+                "left": 294.01251220703125,
+                "right": 494.01251220703125,
+                "top": 282,
+                "width": 200,
+                "x": 294.01251220703125,
+                "y": 282
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": \"\"}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "301487fb-4fe8-40a2-97c9-5d6325d068be",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "c2a50a7d-9288-4b71-9020-913606ca9bfa"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/1.0.1",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "file_input": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ABRicate",
+                    "name": "file_input"
+                }
+            ],
+            "label": null,
+            "name": "ABRicate",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 266.40000915527344,
+                "height": 154.40000915527344,
+                "left": 628.0375366210938,
+                "right": 828.0375366210938,
+                "top": 112,
+                "width": 200,
+                "x": 628.0375366210938,
+                "y": 112
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/1.0.1",
+            "tool_shed_repository": {
+                "changeset_revision": "3f3e247c053d",
+                "name": "abricate",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": {\"db\": \"resfinder\", \"no_header\": \"false\", \"min_dna_id\": \"80.0\", \"min_cov\": \"80.0\"}, \"file_input\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.1",
+            "type": "tool",
+            "uuid": "a151538b-2117-4c64-99cc-1bfcda0fcf63",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "report",
+                    "uuid": "39d0852c-afcb-4ddd-9f26-f55755dc973e"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.8.0+galaxy0",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "genomes": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool staramr",
+                    "name": "genomes"
+                }
+            ],
+            "label": null,
+            "name": "staramr",
+            "outputs": [
+                {
+                    "name": "blast_hits",
+                    "type": "input"
+                },
+                {
+                    "name": "mlst",
+                    "type": "tabular"
+                },
+                {
+                    "name": "summary",
+                    "type": "tabular"
+                },
+                {
+                    "name": "detailed_summary",
+                    "type": "tabular"
+                },
+                {
+                    "name": "resfinder",
+                    "type": "tabular"
+                },
+                {
+                    "name": "plasmidfinder",
+                    "type": "tabular"
+                },
+                {
+                    "name": "settings",
+                    "type": "txt"
+                },
+                {
+                    "name": "excel",
+                    "type": "xlsx"
+                }
+            ],
+            "position": {
+                "bottom": 950.2000122070312,
+                "height": 571.2000122070312,
+                "left": 609.0375366210938,
+                "right": 809.0375366210938,
+                "top": 379,
+                "width": 200,
+                "x": 609.0375366210938,
+                "y": 379
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.8.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "be818ae858e4",
+                "name": "staramr",
+                "owner": "nml",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"advanced\": {\"pid_threshold\": \"98.0\", \"plength_resfinder\": \"60.0\", \"plength_pointfinder\": \"95.0\", \"plength_plasmidfinder\": \"60.0\", \"genome_size_lower_bound\": \"4000000\", \"genome_size_upper_bound\": \"6000000\", \"minimum_N50_value\": \"10000\", \"minimum_contig_length\": \"300\", \"unacceptable_number_contigs\": \"1000\", \"report_all_blast\": \"false\", \"exclude_negatives\": \"false\", \"exclude_resistance_phenotypes\": \"false\", \"mlst_scheme\": \"auto\", \"exclude_genes\": {\"exclude_genes_condition\": \"default\", \"__current_case__\": 0}, \"plasmidfinder_type\": \"include_all\"}, \"genomes\": {\"__class__\": \"RuntimeValue\"}, \"pointfinder_db\": {\"use_pointfinder\": \"disabled\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.8.0+galaxy0",
+            "type": "tool",
+            "uuid": "0daad027-177a-46e8-9093-1a5a3d621864",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "blast_hits",
+                    "uuid": "48a1fb14-7e8b-49ca-9490-23311ff6671d"
+                },
+                {
+                    "label": null,
+                    "output_name": "mlst",
+                    "uuid": "d5faf854-a184-4cf7-b489-4c175eafed00"
+                },
+                {
+                    "label": null,
+                    "output_name": "summary",
+                    "uuid": "66ffe538-3776-4990-8ff5-b31980a0ab7c"
+                },
+                {
+                    "label": null,
+                    "output_name": "detailed_summary",
+                    "uuid": "7e2056c3-f1f9-483c-a927-c6182b5ef80d"
+                },
+                {
+                    "label": null,
+                    "output_name": "resfinder",
+                    "uuid": "91cfb922-6d97-496a-bf80-2948301abc4e"
+                },
+                {
+                    "label": null,
+                    "output_name": "plasmidfinder",
+                    "uuid": "6ca357cb-3f82-486a-bb76-318df0dc54d5"
+                },
+                {
+                    "label": null,
+                    "output_name": "settings",
+                    "uuid": "99cc3ad3-bdf0-4354-979b-aef29709e6f8"
+                },
+                {
+                    "label": null,
+                    "output_name": "excel",
+                    "uuid": "6c889b1f-0e41-4bdf-bdde-34540e2fd997"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_tool/hamronize_tool/1.0.3+galaxy1",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "report": {
+                    "id": 1,
+                    "output_name": "report"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool hamronize",
+                    "name": "report"
+                }
+            ],
+            "label": null,
+            "name": "hamronize",
+            "outputs": [
+                {
+                    "name": "output_tsv",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 320.5999984741211,
+                "height": 113.5999984741211,
+                "left": 930.0499877929688,
+                "right": 1130.0499877929688,
+                "top": 207,
+                "width": 200,
+                "x": 930.0499877929688,
+                "y": 207
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_tool/hamronize_tool/1.0.3+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "ec82fac4eb4b",
+                "name": "hamronize_tool",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"analysis_software_version\": \"\", \"output_format\": \"tsv\", \"reference_database_version\": \"\", \"report\": {\"__class__\": \"RuntimeValue\"}, \"select_tool\": {\"tool\": \"abricate\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.3+galaxy1",
+            "type": "tool",
+            "uuid": "2615f61e-4304-4561-a2f8-b4ca8e2328a8",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_tsv",
+                    "uuid": "2e69d17c-62ca-40a9-9dae-7b9eaada7c2d"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_tool/hamronize_tool/1.0.3+galaxy1",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "report": {
+                    "id": 2,
+                    "output_name": "resfinder"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool hamronize",
+                    "name": "report"
+                }
+            ],
+            "label": null,
+            "name": "hamronize",
+            "outputs": [
+                {
+                    "name": "output_json",
+                    "type": "json"
+                }
+            ],
+            "position": {
+                "bottom": 829.5999984741211,
+                "height": 113.5999984741211,
+                "left": 866.0499877929688,
+                "right": 1066.0499877929688,
+                "top": 716,
+                "width": 200,
+                "x": 866.0499877929688,
+                "y": 716
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_tool/hamronize_tool/1.0.3+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "ec82fac4eb4b",
+                "name": "hamronize_tool",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"analysis_software_version\": \"\", \"output_format\": \"json\", \"reference_database_version\": \"\", \"report\": {\"__class__\": \"RuntimeValue\"}, \"select_tool\": {\"tool\": \"staramr\", \"__current_case__\": 2}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.3+galaxy1",
+            "type": "tool",
+            "uuid": "8ee7a624-8f05-4392-9526-dc80791e45f1",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_json",
+                    "uuid": "ca68a249-b868-480d-a81d-fe94f45e4b44"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_summarize/hamronize_summarize/1.0.3+galaxy1",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "reports": [
+                    {
+                        "id": 3,
+                        "output_name": "output_tsv"
+                    },
+                    {
+                        "id": 4,
+                        "output_name": "output_json"
+                    }
+                ]
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool summarize",
+                    "name": "reports"
+                }
+            ],
+            "label": null,
+            "name": "summarize",
+            "outputs": [
+                {
+                    "name": "output_json",
+                    "type": "json"
+                }
+            ],
+            "position": {
+                "bottom": 615.5999984741211,
+                "height": 113.5999984741211,
+                "left": 1168.050048828125,
+                "right": 1368.050048828125,
+                "top": 502,
+                "width": 200,
+                "x": 1168.050048828125,
+                "y": 502
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hamronize_summarize/hamronize_summarize/1.0.3+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "a84e3131ae6a",
+                "name": "hamronize_summarize",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"reports\": {\"__class__\": \"RuntimeValue\"}, \"summary_type\": \"json\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.3+galaxy1",
+            "type": "tool",
+            "uuid": "bb8cb533-32bf-4ff8-9af1-55285bbaa45a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_json",
+                    "uuid": "430a762f-0d57-40e4-95f9-c6ac18b68a3d"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/antismash/antismash/6.1.1+galaxy1",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                },
+                "sideload|file": {
+                    "id": 5,
+                    "output_name": "output_json"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Antismash",
+                    "name": "genefinding_gff3"
+                },
+                {
+                    "description": "runtime parameter for tool Antismash",
+                    "name": "infile"
+                },
+                {
+                    "description": "runtime parameter for tool Antismash",
+                    "name": "sideload"
+                }
+            ],
+            "label": null,
+            "name": "Antismash",
+            "outputs": [
+                {
+                    "name": "html",
+                    "type": "html"
+                }
+            ],
+            "position": {
+                "bottom": 539.6000061035156,
+                "height": 235.60000610351562,
+                "left": 1481.050048828125,
+                "right": 1681.050048828125,
+                "top": 304,
+                "width": 200,
+                "x": 1481.050048828125,
+                "y": 304
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/antismash/antismash/6.1.1+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "bc88856eddab",
+                "name": "antismash",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"advanced_options\": {\"minlength\": \"1000\", \"hmmdetection_strictness\": \"relaxed\", \"cb_nclusters\": \"10\", \"cb_min_homology_scale\": \"0.0\", \"rre_cutoff\": \"25.0\", \"rre_minlength\": \"50\"}, \"asf\": \"true\", \"cb_general\": \"false\", \"cb_knownclusters\": \"true\", \"cb_subclusters\": \"true\", \"cc_mibig\": \"false\", \"clusterhmmer\": \"false\", \"cond_taxon\": {\"taxon\": \"bacteria\", \"__current_case__\": 0, \"genefinding_tool\": \"prodigal\", \"tigrfam\": \"false\"}, \"fullhmmer\": \"false\", \"genefinding_gff3\": {\"__class__\": \"RuntimeValue\"}, \"infile\": {\"__class__\": \"RuntimeValue\"}, \"outputs\": [\"html\"], \"pfam2go\": \"true\", \"rre\": \"true\", \"sideload\": {\"file\": {\"__class__\": \"RuntimeValue\"}, \"format\": \"harmonize\"}, \"smcog_trees\": \"true\", \"tta_threshold\": \"0.65\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "6.1.1+galaxy1",
+            "type": "tool",
+            "uuid": "38c2dc21-48d3-44a8-ac66-2ebf397cdd32",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "html",
+                    "uuid": "5b3951fe-2133-4f6e-b5b2-a9baadca175c"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "b2e9026f-13a5-4ef8-bd43-fc7de8b32f45",
+    "version": 1
+}
